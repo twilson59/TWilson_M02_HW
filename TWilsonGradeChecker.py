@@ -2,9 +2,9 @@
 #Module 2 Homework
 #TWilsonGradeChecker.py
 #Accepts inputs for a students name and GPA, then checks their grade to see if they've made the 
-#dean's list.  Also validates input.
+#dean's list or honor roll.  Also validates input.
 
-#Define constant DEANSLIST
+#Define constants DEANSLIST and HONORROLL
 DEANSLIST = 3.5
 HONORROLL = 3.25
 
@@ -21,6 +21,8 @@ while True:
     # input validation
     while True:
         if re.search(invalid,lastName) == None:
+#the results of the re.search function will be None if there are no invalid characters
+#and the loop will be broken.
             break
         else:
             lastName = str(input("You entered an invalid character, please try again: "))
